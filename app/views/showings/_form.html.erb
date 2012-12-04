@@ -1,0 +1,29 @@
+<%= form_for(@showing) do |f| %>
+  <% if @showing.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@showing.errors.count, "error") %> prohibited this showing from being saved:</h2>
+
+      <ul>
+      <% @showing.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :movie_id, "Movie ID" %><br />
+    <%= f.number_field :movie_id %>
+  </div>
+  <div class="field">
+    <%= f.label :showing_time, "Showing Time" %><br />
+    <%= f.time_select :showing_time %>
+  </div>
+  <div class="field">
+    <%= f.label :number_of_available_seats, "Available seats" %><br />
+    <%= f.number_field :number_of_available_seats %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -12,6 +12,23 @@
 # It's strongly recommended to check this file into your version control system.
 
 <<<<<<< HEAD
+ActiveRecord::Schema.define(:version => 20121203175047) do
+
+  create_table "showings", :force => true do |t|
+    t.integer  "movie_id"
+    t.time     "showing_time"
+    t.integer  "number_of_available_seats"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+=======
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20121202182107) do
 
   create_table "movies", :force => true do |t|
@@ -36,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20121202080606) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
 >>>>>>> cf689ec039efc945622cc0d57f2f57fd78a82dc1
+>>>>>>> dd6f96aa6c788079a1ea6933ffbd8b3916b205e2
   end
 
 end
